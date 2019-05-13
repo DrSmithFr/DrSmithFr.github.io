@@ -1,11 +1,11 @@
 ---
 layout: home
+title: "John Daligault"
 author_profile: true
 pagination:
   enabled: false
 ---
 
-# John Daligault
 Full stack developer (PHP, Js, Go, Bash).
 
 ## Currently
