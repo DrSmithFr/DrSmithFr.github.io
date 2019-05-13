@@ -16,10 +16,10 @@ Here I develop web applications and maintain servers.
 ## Employment
 
 > __EAMS__ - `2018-02 / actual` <br>
-> Lead Full stack (Symfony3+, Angular6+, ExtJs, C#).
+> Lead Fullstack & DevOps (Symfony3+, Angular6+, ExtJs, C#, Docker, Jenkins).
 
 > __Altima__ - `2016-07 / 2018-01` <br>
-> Lead Full stack (Symfony4+, Angular4, VueJs, RabbitMQ, Redis).
+> Lead Full stack (Symfony4+, Angular4, VueJs, RabbitMQ, Redis, Docker).
 
 > __C2iS__ - `2015-10 / 2016-07` <br>
 > Backend developer (Symfony2, Node, Elasticsearch).
