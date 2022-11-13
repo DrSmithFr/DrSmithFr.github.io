@@ -8,21 +8,29 @@ pagination:
 
 Full stack developer (PHP, Js, Go, Bash).
 
-## Currently
-
-I'm a Lead Full stack developer at [EAMS](https://www.egis.fr/), based at Lyon, FR.
-Here I develop web applications and maintain servers.
-
 ## Employment
 
-> __EAMS__ - `2018-02 / actual` <br>
-> Lead Fullstack & DevOps (Symfony3+, Angular6+, ExtJs, C#, Docker, Jenkins).
+> __MonPetitPlacement.fr__ - `2019-05 / 2020-10` <br>
+> Lead Fullstack & DevOps (Symfony4+, Angular9+, Docker, TeamCity).
+> Online Investment website.
 
-> __Altima__ - `2016-07 / 2018-01` <br>
+> __EAMS__ - `2018-02 / 2019-04` <br>
+> Lead Fullstack & DevOps (Symfony3+, Angular6+, ExtJs, WebGL, Tree.js, Docker, Jenkins).
+> Infrastructure management (highways, tunnels, bridges and airport).
+
+> __Salomon.com__ - `2016-07 / 2018-01` <br>
 > Lead Full stack (Symfony4+, Angular4, VueJs, RabbitMQ, Redis, Docker).
+> Working through Altima° (web agency).
+> Refactoring web architecture to a Gateway Pattern with shared cache for front's servers, Implementation of Algolia as search engine.
 
-> __C2iS__ - `2015-10 / 2016-07` <br>
+> __Relais&Chateaux.com__ - `2015-10 / 2016-07` <br>
 > Backend developer (Symfony2, Node, Elasticsearch).
+> Working through C2iS (web agency).
+> Developing VIP section, PDF generation.
+
+> __Green Systems__
+> App developer (Qt, SQLite)
+> Creation of temperature regulation apps for professional use.
 
 ## Education
 

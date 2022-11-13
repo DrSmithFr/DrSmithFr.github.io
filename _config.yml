@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "DrSmithFr"
+title                    : "John D."
 title_separator          : "-"
-name                     : "John Daligault"
+name                     : "John D."
 description              : "An amazing website."
 url                      : "https://drsmithfr.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -109,7 +109,7 @@ author:
   name             : "DrSmithFr"
   avatar           : "/assets/images/avatar.jpeg"
   bio              : "It always seems impossible until it's done."
-  location         : "Lyon (FR)"
+  location         : "Mallorca (ES)"
   email            :
   links:
     - label: "Email"
