@@ -6,9 +6,17 @@ pagination:
   enabled: false
 ---
 
-Full stack developer (PHP, Js, Go, Bash).
+Full stack developer (PHP, Ts, Js, Go, Bash).
 
 ## Employment
+
+> __LaHaut - Parapente__ - `2022-05 / 2023-04` <br>
+> Lead Fullstack & DevOps (Symfony5+, Angular15+, Docker, TeamCity).
+> Paragliding flight booking platform with independent instructors (production scheduled for June 2023)
+
+> __Bijou’art__ - `2021-05 / 2022-02` <br>
+> Lead Fullstack & DevOps (Symfony4+, Angular12+, Docker, TeamCity).
+> Online store for custom jewellery (Abandoned due to raw material supply difficulties)
 
 > __MonPetitPlacement.fr__ - `2019-05 / 2020-10` <br>
 > Lead Fullstack & DevOps (Symfony4+, Angular9+, Docker, TeamCity).
