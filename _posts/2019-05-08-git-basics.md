@@ -133,7 +133,7 @@ linear history while integrating upstream changes into your local branch.
 
 The diagram below visualizes this process.
 
-![rebase](https://lh6.googleusercontent.com/-F7BIyLtEn22yHVENJ99u5geq4ul67yFpUWyC03VJRhtI18857QG4O9Zd4LCUpQhAH3yJu234pcZsLki_Xi8yQq9Ce4lMY4ejcC9DNai3TUcLUfQgRvLQiiA0D16FolUBU5MBI8A)
+![rebase](https://wac-cdn.atlassian.com/dam/jcr:e4a40899-636b-4988-9774-eaa8a440575b/02.svg?cdnVersion=kx)
 
 In theory, if done correctly, rebase works well when working alone. When working
 on a team with shared branches, however, it becomes much more complicated. One 
