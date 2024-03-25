@@ -216,10 +216,77 @@ You can directly add all untracked files using `-a` option
 
 Alias: `git ci`
 
+## git branch
+
+When developing a new feature, it is considered a good practice to work on a copy
+of the original project, called a branch. Branches have their own history and
+isolate their changes from one another, until you decide to merge them back together.
+
+This is done for a couple of reasons:
+
+- An already working, stable version of the code won't be broken.
+- Many features can be safely developed at once by different people.
+- Developers can work on their own branch, without the risk of their codebase
+  changing due to someone else's work.
+- When unsure what's best, multiple versions of the same feature can be
+  developed on separate branches and then compared.
+
+You can create a new branch from the current one using:
+
+```bash
+    git branch branch_name
+    # or
+    git checkout -b branch_name
+    # or with gitconfig alias
+    git co -b branch_name
+```
+
+You can delete a local branch using:
+
+```bash
+    git branch -D branch_name
+```
+
+To delete remote branch, you need to use push
+
+```bash
+    git push origin :branch_name
+```
+
+## git checkout
+
+This command allow a bunch of different thing
+- switch branch
+- download the current remote version of a file
+
+For branch switching use:
+
+```bash
+    git checkout branch_name
+    # or with gitconfig alias
+    git co branch_name
+```
+
+Return to the last branch with
+
+```bash
+    git checkout -
+    # or with gitconfig alias
+    git co -
+```
+
+To reset a modified and untracked file
+
+```bash
+    git checkout path/to/file.ext
+    # or with gitconfig alias
+    git co path/to/file.ext
+```
+
 ## git fetch
 
 this command will download the updated graph of commit.
-Used with `-p` option, it will also delete local branch that have been destroy on server. 
+Used with `-p` option, it will also delete local branch that have been destroy on server.
 
 ## git pull
 
@@ -234,9 +301,9 @@ you can cleanup your workspace using `git reset --hard`, or keep it for later us
 
 This command update the remote repository commit tree with the one from your local repository.
 
-This command may fail if your not up to date on your branch. Use `git pull` and fix 
-conflict to solve this. This command may also fail if you change the graph history. 
-Use `git pull -f` to rewrite it on server. 
+This command may fail if your not up to date on your branch. Use `git pull` and fix
+conflict to solve this. This command may also fail if you change the graph history.
+Use `git pull -f` to rewrite it on server.
 
 ## git merge
 
@@ -299,73 +366,6 @@ Example rebasing branch **feature_1** from **master**
 ```
 
 Now **feature_1** is up to date with **master** and they can be merge without conflicts!
-
-## git branch
-
-When developing a new feature, it is considered a good practice to work on a copy 
-of the original project, called a branch. Branches have their own history and 
-isolate their changes from one another, until you decide to merge them back together.
-
-This is done for a couple of reasons:
-
-- An already working, stable version of the code won't be broken.
-- Many features can be safely developed at once by different people.
-- Developers can work on their own branch, without the risk of their codebase
-changing due to someone else's work.
-- When unsure what's best, multiple versions of the same feature can be 
-developed on separate branches and then compared.
-
-You can create a new branch from the current one using:
-
-```bash
-    git branch branch_name
-    # or
-    git checkout -b branch_name
-    # or with gitconfig alias
-    git co -b branch_name
-```
-
-You can delete a local branch using:
-
-```bash
-    git branch -D branch_name
-```
-
-To delete remote branch, you need to use push
-
-```bash
-    git push origin :branch_name
-```
-
-## git checkout
-
-This command allow a bunch of different thing
-- switch branch
-- download the current remote version of a file
-
-For branch switching use:
-
-```bash
-    git checkout branch_name
-    # or with gitconfig alias
-    git co branch_name
-```
-
-Return to the last branch with
-    
-```bash
-    git checkout -
-    # or with gitconfig alias
-    git co -
-```
-
-To reset a modified and untracked file
-
-```bash
-    git checkout path/to/file.ext
-    # or with gitconfig alias
-    git co path/to/file.ext
-```
 
 ## Git hooks
 
@@ -436,15 +436,15 @@ merging strategy need to be apply.
 Add current index to the last commit and open commit message editor
 
 ```bash
-    git commit --amand
+    git commit --amend
     # or with gitconfig alias
-    git amand
+    git amend
 ```
 
 Add current index to the last commit and keep old message
 
 ```bash
-    git commit --amand --no-edit
+    git commit --amend --no-edit
     # or with gitconfig alias
     git oops
 ```
