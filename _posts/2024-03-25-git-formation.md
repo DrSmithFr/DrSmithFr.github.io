@@ -582,7 +582,7 @@ recording a new commit for each.
 
 This file can be found anywhere in the project. it ignore or force files to be follow by git.
 
-```git exclude
+```bash
     # ignore all files with path containing .phpunit
     .phpunit
     
@@ -596,9 +596,11 @@ This file can be found anywhere in the project. it ignore or force files to be f
     !/.phpunit
 ```
 
+
 A common tips, to ignore a folder but force git to create it
 
-```git exclude
+
+```bash
     /path/to/ignore
     !/path/to/ignore/.gitkeep
 ```
@@ -607,8 +609,10 @@ A common tips, to ignore a folder but force git to create it
 
 You can add a .gitignore_global on the ~/.gitconfig
 
+```bash
     [core]
         excludesfile = ~/.gitignore_global
+```
         
 By convention, all IDE related file MUST be ignore here, never withing the .gitignore for the projet
 
