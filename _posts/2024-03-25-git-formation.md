@@ -54,6 +54,15 @@ It contain the textual representation of change added to the index (using `git a
 Using `git status`, show content of the index with all files flagged as tracked.
 Alias: `git st`
 
+## Repository
+
+A repository is a folder containing a `.git` directory.
+This directory contain all the data needed to manage the repository.
+
+## Remote repository
+
+A remote repository is a repository on a server.
+
 ## Installation
 
 Installing Git on your machine is straightforward:
@@ -96,26 +105,26 @@ There are a set of rules to keep in mind:
     
     >Because this way all work is done in isolation on a dedicated branch
     rather than the main branch. It allows you to submit multiple pull 
-    requests without confusion. You can iterate without polluting the master
+    requests without confusion. You can iterate without polluting the main
     branch with potentially unstable, unfinished code. 
     [read more...](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow)
     
-* Branch out from `develop`
+* Branch out from `dev`
     
-    >This way, you can make sure that code in master will almost always
+    >This way, you can make sure that code in main will almost always
     build without problems, and can be mostly used directly for releases 
     (this might be overkill for some projects).
 
-* Never push into `develop` or `master` branch. Make a Pull Request.
+* Never push into `dev` or `main` branch. Make a Pull Request.
     
     > It notifies team members that they have completed a feature. It also
     enables easy peer-review of the code and dedicates forum for discussing
     the proposed feature.
 
-* Update your local `develop` branch and do an interactive rebase before
+* Update your local `dev` branch and do an interactive rebase before
 pushing your feature and making a Pull Request.
 
-    > Rebasing will merge in the requested branch (`master` or `develop`) 
+    > Rebasing will merge in the requested branch (`main` or `dev`) 
     and apply the commits that you have made locally to the top of the history
     without creating a merge commit (assuming there were no conflicts). 
     Resulting in a nice and clean history.
@@ -125,7 +134,7 @@ pushing your feature and making a Pull Request.
 * Delete local and remote feature branches after merging.
     
     > It will clutter up your list of branches with dead branches. It ensures
-    you only ever merge the branch back into (`master` or `develop`) once. 
+    you only ever merge the branch back into (`main` or `dev`) once. 
     Feature branches should only exist while the work is still in progress.
 
 * Before making a Pull Request, make sure your feature branch builds successfully
@@ -137,7 +146,7 @@ and passes all tests (including code style checks).
     Pull Request. It aids readability and reduces the chance of formatting fixes 
     being mingled in with actual changes.
 
-* Protect your `develop` and `master` branch.
+* Protect your `dev` and `main` branch.
   
     > It protects your production-ready branches from receiving unexpected and 
     irreversible changes. read more... 
@@ -321,10 +330,10 @@ Fast-forward merge have pretty much the same comportment as rebase did, but addi
 
 To avoid Fast-forward merges, please always use the `--no-ff` option.
 
-Example merging branch **feature_1** in **master**:
+Example merging branch **feature_1** in **main**:
 
 ```bash
-    git checkout masters
+    git checkout main
     git pull
     git merge --no-ff feature_1
     git push
@@ -351,12 +360,12 @@ must be extremely careful when choosing to rebase. Rebase needed to be used only
 to fix conflict on merge request. It allow you to solve the conflict for each commit 
 (opposite to merge, which allow you to fixing conflict only with the merge commit).
 
-Example rebasing branch **feature_1** from **master**
+Example rebasing branch **feature_1** from **main**
 
 ```bash
     git checkout feature_1
     git pull
-    git rebase -p master
+    git rebase -p main
     
     # fix conflict
     git rebase --continue
@@ -365,7 +374,7 @@ Example rebasing branch **feature_1** from **master**
     git push -f
 ```
 
-Now **feature_1** is up to date with **master** and they can be merge without conflicts!
+Now **feature_1** is up to date with **main** and they can be merge without conflicts!
 
 ## Git hooks
 
@@ -393,23 +402,23 @@ according to its content.
 ### Branch origin
 
 When your create a branch, it always start from the last commit of the current branch.
-So your branch may be created from `develop` or `master` on this project.
+So your branch may be created from `dev` or `main` on this project.
 
-- Branch create from `develop` can be merge in `develop` only. 
-- Branch create from `master` can be merge in `master` or `develop`.
+- Branch create from `dev` can be merge in `dev` only. 
+- Branch create from `main` can be merge in `main` or `dev`.
 
 So:
 
-- **Hot fix branch** are always created from `master`.
-- **bug fix branch** are always created from `develop`.
-- **Feature branch** may be create from `develop` or `master`, according to which 
+- **Hot fix branch** are always created from `main`.
+- **bug fix branch** are always created from `dev`.
+- **Feature branch** may be create from `dev` or `main`, according to which 
 merging strategy need to be apply.
 
 ### Commands
 
 ```bash
-    # go on master or develop
-    git checkout master|develop
+    # go on main or dev
+    git checkout main|dev
     
     # update current branch
     git pull
@@ -472,8 +481,8 @@ create multiple stashes,
 and then use `git stash list` to view them.
 
     $ git stash list
-    stash@{0}: On master: stash_message
-    stash@{1}: On develop: stash_message
+    stash@{0}: On main: stash_message
+    stash@{1}: On dev: stash_message
     
 - Restore a stash using `git stash apply stash@{INDEX}`.
 - Remove a stash using `git stash clear stash@{INDEX}`.
@@ -525,7 +534,7 @@ This operation will rewrite the graph commit history, please only use it when
 you make a merge request which as conflict.
 
 ```bash
-    # my merge request from feature_1 to develop as conflict
+    # my merge request from feature_1 to dev as conflict
     # go on the feature branch
     git checkout feature_1
     
@@ -533,7 +542,7 @@ you make a merge request which as conflict.
     git fetch
     
     # start rebase
-    git rebase -p develop
+    git rebase -p dev
     
     # for each commit, fix conflict then
     git rebase --continue
@@ -624,9 +633,9 @@ By convention, all IDE related file MUST be ignore here, never withing the .giti
 - Always commit check code (PSR-2, PHPmd), or your pull request may be decline.
 - Commit every hours (or more), with correct and understandable messages.
 - Push your branch after each commit.
-- Once finish, go on bitbucket and make your pull request to `develop`
+- Once finish, go on bitbucket and make your pull request to `dev`
 - (optional) Correct your pull request according to the review
-- Once the pull request is approved and merged you can pull `develop`.
+- Once the pull request is approved and merged you can pull `dev`.
 
 And last but not least: Your commit message should describe what the commit, 
 when applied, does to the code – not what you did to the code.
