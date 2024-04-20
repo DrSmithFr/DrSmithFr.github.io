@@ -9,6 +9,17 @@ pagination:
 Full-stack developer (PHP, Ts, Js, Go, Bash).
 
 ## Employment
+> __Webyn - CRO Optimizer__ - `2023-08 / today` <br>
+> Lead Fullstack & DevOps
+
+Paragliding flight booking platform with independent instructors (production scheduled for June 2023)
+
+ - Backend: PHP8.3 · Symfony6+ · MySQL
+ - Frontend: Angular16+ · Angular Material · PWA
+ - Data: Python3.8 · Flask · Golang
+ - DevOps: Linux · Ngnix · Docker
+ - CI/CD: GitLab · PHPunit · PHPcs · PHPmd · Jasmine · EsLint
+ - VCS: Git
 
 > __LaHaut - Parapente__ - `2022-05 / 2023-04` <br>
 > Lead Fullstack & DevOps
